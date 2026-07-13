@@ -1,4 +1,4 @@
-import { ChangeEvent } from "react";
+import type { ChangeEvent } from "react";
 import { FaSearch } from "react-icons/fa";
 
 interface SearchBarProps {

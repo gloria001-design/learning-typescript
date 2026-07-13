@@ -212,7 +212,9 @@ const Home = () => {
           </div>
         )}
 
-        {loading && <Loading />}
+    {loading && (
+  <Loading darkMode={darkMode} />
+)}
 
         {!loading && error && (
           <ErrorMessage message={error} />
