@@ -122,7 +122,7 @@ const Home = () => {
 
   return (
     <div
-      className={`min-h-screen transition-all duration-300 ${
+      className={`min-h-screen overflow-x-hidden transition-all duration-300 ${
         darkMode
           ? "bg-slate-950"
           : "bg-slate-100"
@@ -130,10 +130,10 @@ const Home = () => {
     >
       <Navbar darkMode={darkMode} />
 
-      <div className="max-w-7xl mx-auto px-6 py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
 
         {/* Theme Toggle */}
-        <div className="flex justify-end mb-8">
+        <div className="flex justify-end mb-6 sm:mb-8">
           <button
             onClick={toggleTheme}
             className={`p-3 rounded-full transition shadow-lg ${
@@ -150,7 +150,7 @@ const Home = () => {
         <div className="text-center mb-12">
 
           <h1
-            className={`text-5xl font-bold ${
+            className={`text-3xl sm:text-4xl md:text-5xl font-bold ${
               darkMode
                 ? "text-white"
                 : "text-slate-900"
@@ -199,7 +199,7 @@ const Home = () => {
               <button
                 key={item}
                 onClick={() => setUsername(item)}
-                className={`px-4 py-2 rounded-full transition ${
+                className={`px-4 py-2 rounded-full transition max-w-full break-all ${
                   darkMode
                     ? "bg-slate-800 text-white hover:bg-blue-600"
                     : "bg-white border border-slate-300 hover:bg-blue-600 hover:text-white"
@@ -232,7 +232,7 @@ const Home = () => {
               <div className="flex flex-col md:flex-row justify-between items-center gap-4 mb-8">
 
                 <h2
-                  className={`text-3xl font-bold ${
+                  className={`text-2xl sm:text-3xl font-bold ${
                     darkMode
                       ? "text-white"
                       : "text-slate-900"
@@ -257,7 +257,7 @@ const Home = () => {
               />
 
               {filteredRepos.length > 0 ? (
-                <div className="grid md:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   {filteredRepos.map((repo) => (
                     <RepoCard
                       key={repo.id}

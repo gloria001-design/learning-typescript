@@ -17,17 +17,17 @@ const UserCard = ({
   darkMode,
 }: UserCardProps) => {
   return (
-    <section className="mt-12">
+    <section className="mt-8 sm:mt-12">
 
       <div
-        className={`rounded-3xl p-8 border shadow-xl transition-all duration-300 ${
+        className={`rounded-3xl p-5 sm:p-8 border shadow-xl transition-all duration-300 ${
           darkMode
             ? "bg-slate-900 border-slate-700"
             : "bg-white border-slate-300"
         }`}
       >
 
-        <div className="flex flex-col lg:flex-row items-center lg:items-start gap-8">
+        <div className="flex flex-col lg:flex-row items-center lg:items-start gap-6 sm:gap-8">
 
           {/* Avatar */}
           <div className="flex-shrink-0">
@@ -35,16 +35,16 @@ const UserCard = ({
             <img
               src={user.avatar_url}
               alt={user.login}
-              className="w-40 h-40 rounded-full border-4 border-blue-500 object-cover shadow-lg"
+              className="w-28 h-28 sm:w-40 sm:h-40 rounded-full border-4 border-blue-500 object-cover shadow-lg"
             />
 
           </div>
 
           {/* User Info */}
-          <div className="flex-1 text-center lg:text-left">
+          <div className="flex-1 min-w-0 w-full text-center lg:text-left">
 
             <h2
-              className={`text-4xl font-bold ${
+              className={`text-2xl sm:text-4xl font-bold break-words ${
                 darkMode
                   ? "text-white"
                   : "text-slate-900"
@@ -59,7 +59,7 @@ const UserCard = ({
 
             {user.bio && (
               <p
-                className={`mt-5 leading-8 max-w-3xl ${
+                className={`mt-5 leading-7 sm:leading-8 max-w-3xl break-words ${
                   darkMode
                     ? "text-slate-300"
                     : "text-slate-700"
@@ -99,7 +99,7 @@ const UserCard = ({
       </div>
 
       {/* Stats */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 mt-6 sm:mt-8">
 
         <StatsCard
           title="Followers"

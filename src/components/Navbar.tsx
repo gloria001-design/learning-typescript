@@ -11,7 +11,7 @@ const Navbar = ({ darkMode }: NavbarProps) => {
           : "bg-white border-slate-200 shadow-sm"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4 sm:py-5 flex justify-between items-center">
 
         <h1
           className={`text-2xl font-bold ${
@@ -22,7 +22,7 @@ const Navbar = ({ darkMode }: NavbarProps) => {
         </h1>
 
         <div
-          className={`hidden md:flex gap-6 ${
+          className={`flex gap-4 md:gap-6 text-sm md:text-base ${
             darkMode ? "text-slate-300" : "text-slate-700"
           }`}
         >

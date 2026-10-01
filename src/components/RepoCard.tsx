@@ -17,7 +17,7 @@ const RepoCard = ({
 }: RepoCardProps) => {
   return (
     <div
-      className={`rounded-2xl border p-6 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:border-blue-500 ${
+      className={`min-w-0 rounded-2xl border p-5 sm:p-6 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:border-blue-500 ${
         darkMode
           ? "bg-slate-900 border-slate-700"
           : "bg-white border-slate-300 shadow-sm"
@@ -25,7 +25,7 @@ const RepoCard = ({
     >
       {/* Repository Name */}
       <h3
-        className={`text-2xl font-bold ${
+        className={`text-xl sm:text-2xl font-bold break-words ${
           darkMode
             ? "text-white"
             : "text-slate-900"
@@ -36,7 +36,7 @@ const RepoCard = ({
 
       {/* Description */}
       <p
-        className={`mt-4 min-h-[70px] leading-7 ${
+        className={`mt-4 md:min-h-[70px] leading-7 break-words ${
           darkMode
             ? "text-slate-400"
             : "text-slate-600"
@@ -81,7 +81,7 @@ const RepoCard = ({
       </div>
 
       {/* Footer */}
-      <div className="flex justify-between items-center mt-8">
+      <div className="flex flex-wrap justify-between items-center gap-3 mt-6 sm:mt-8">
 
         <small
           className={

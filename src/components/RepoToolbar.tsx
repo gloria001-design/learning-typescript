@@ -21,7 +21,7 @@ const RepoToolbar = ({
       <select
         value={sortBy}
         onChange={(e) => setSortBy(e.target.value)}
-        className={`rounded-xl px-5 py-3 border outline-none transition-all duration-300 ${
+        className={`w-full md:w-auto text-base rounded-xl px-4 sm:px-5 py-3 border outline-none transition-all duration-300 ${
           darkMode
             ? "bg-slate-900 border-slate-700 text-white"
             : "bg-white border-slate-300 text-slate-900 shadow-sm"
@@ -35,7 +35,7 @@ const RepoToolbar = ({
       <select
         value={language}
         onChange={(e) => setLanguage(e.target.value)}
-        className={`rounded-xl px-5 py-3 border outline-none transition-all duration-300 ${
+        className={`w-full md:w-auto text-base rounded-xl px-4 sm:px-5 py-3 border outline-none transition-all duration-300 ${
           darkMode
             ? "bg-slate-900 border-slate-700 text-white"
             : "bg-white border-slate-300 text-slate-900 shadow-sm"

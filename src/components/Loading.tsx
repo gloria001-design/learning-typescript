@@ -8,7 +8,7 @@ const Loading = ({ darkMode }: LoadingProps) => {
 
       {/* User Card Skeleton */}
       <div
-        className={`rounded-3xl border p-8 ${
+        className={`rounded-3xl border p-5 sm:p-8 ${
           darkMode
             ? "bg-slate-900 border-slate-700"
             : "bg-white border-slate-300"
@@ -27,7 +27,7 @@ const Loading = ({ darkMode }: LoadingProps) => {
           <div className="flex-1 w-full">
 
             <div
-              className={`h-8 rounded w-56 mb-4 ${
+              className={`h-8 rounded w-56 max-w-full mb-4 ${
                 darkMode
                   ? "bg-slate-700"
                   : "bg-slate-300"
